@@ -2,15 +2,46 @@ body{
     margin: 0;
     padding: 0;   
     background-color: #444;
-    color: rgba(255, 255, 255, 0.589);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  color: rgba(255, 255, 255, 0.589);
     height: 100vh;
 }
 
+.same-for-all{
+    margin: 0.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    /* margin: 0; */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100%;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+@keyframes text{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+header{
+    animation-name: text;
+    /* animation-duration: 3s; */
+    animation-timing-function: steps(31);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
 
 
 svg{
@@ -20,6 +51,11 @@ svg{
 
 h2{
   letter-spacing: 5px;
+  color: rgba(255, 255, 255, 0.589);
+}
+.light-mode{
+    background-color: white;
+  color: #404040;
 }
 
 @keyframes trying {
@@ -28,7 +64,7 @@ h2{
     }
 
     100% {
-        transform: translateX(0);
+        transform: translateX(0px);
     }
 }
 
@@ -37,12 +73,13 @@ h2{
     animation-duration: 3.4s;
     animation-delay: 0.3s;
     animation-fill-mode: backwards;
+    position: relative;
     width: 250px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto;
 }
 
 .cards{
@@ -56,7 +93,7 @@ h2{
     border: 1px solid #333;
     border-radius: 5px;
     width: 250px;
-    height: 200px;
+    height: 250px;  
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +126,6 @@ h2{
 .theory{
   
     animation-name: trying;
-    /* position: relative; */
     border: 1px solid white;
     border-radius: 5px;
     background-color: white;
@@ -109,27 +145,11 @@ h2{
 .cards:hover .theory{
     transform: translateY(0);
     border-radius: 0;
+    z-index: 1;
 }
 
 a{
     text-decoration: none;
     color: black;
     font-weight: 50%;
-}
-
-button{
-    margin-top: 3%;
-    margin-bottom: 4%;
-    padding: 2%;
-    border-radius: 5px;
-    border-color: white;
-    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
-    transition: 1s;
-}
-
-button:hover{
-    transform: scale(1.1);
-    border: 1px solid #333;
 }
